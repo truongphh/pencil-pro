@@ -1,0 +1,32 @@
+{
+	"swatch_size": 72,
+	"spacing": 12,
+	"tool_columns": 3,
+	"default_color_index": 8,
+	"default_pen": "brush",
+	"palette": [
+		"#FF9AA2",
+		"#FFC09F",
+		"#FFE29A",
+		"#F7F7A0",
+		"#C4F0A6",
+		"#8FE3B0",
+		"#9BF0E8",
+		"#9BD4FF",
+		"#A5B4FF",
+		"#C9A8FF",
+		"#F2A8F0",
+		"#FFB3D1",
+		"#D9B38C",
+		"#B8B8C8",
+		"#7A7F94",
+		"#3A3D4D"
+	],
+	"pens": [
+		{ "id": "pencil", "label": "Bút chì", "icon": "pencil", "radius": 3.0, "hardness": 1.0, "pressure_scale": 0.5 },
+		{ "id": "brush", "label": "Cọ", "icon": "brush", "radius": 12.0, "hardness": 0.25, "pressure_scale": 1.0 },
+		{ "id": "marker", "label": "Bút dạ", "icon": "marker", "radius": 22.0, "hardness": 1.0, "pressure_scale": 0.0 }
+	],
+	"fill_tool": { "label": "Đổ màu", "icon": "fill" },
+	"sticker_tool": { "label": "Sticker", "icon": "sticker" }
+}

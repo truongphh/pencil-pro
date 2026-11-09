@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://src/screens/drawing_page.gd" id="1_page"]
+[ext_resource type="PackedScene" path="res://src/drawing/drawing_canvas.tscn" id="2_drawing"]
+[ext_resource type="Script" path="res://src/ui/icon_button.gd" id="3_iconbutton"]
+[ext_resource type="Script" path="res://src/ui/mute_button.gd" id="4_mutebutton"]
+
+[node name="DrawingPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_page")
+
+[node name="Drawing" parent="." instance=ExtResource("2_drawing")]
+layout_mode = 1
+
+[node name="HomeButton" type="Button" parent="."]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 104.0
+offset_bottom = 104.0
+tooltip_text = "Về nhà"
+script = ExtResource("3_iconbutton")
+icon_name = &"home"
+
+[node name="MuteButton" type="Button" parent="."]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -104.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 104.0
+grow_horizontal = 0
+tooltip_text = "Âm thanh"
+script = ExtResource("4_mutebutton")
+icon_name = &"sound_on"
+
+[connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]

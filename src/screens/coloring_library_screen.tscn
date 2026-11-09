@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/screens/coloring_library_screen.gd" id="1_library"]
+[ext_resource type="Script" path="res://src/ui/icon_button.gd" id="2_iconbutton"]
+
+[node name="ColoringLibraryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_library")
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 128.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="Center" type="CenterContainer" parent="Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Grid" type="GridContainer" parent="Scroll/Center"]
+layout_mode = 2
+
+[node name="HomeButton" type="Button" parent="."]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 104.0
+offset_bottom = 104.0
+tooltip_text = "Về nhà"
+script = ExtResource("2_iconbutton")
+icon_name = &"home"
+
+[connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]

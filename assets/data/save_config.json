@@ -1,0 +1,18 @@
+{
+	"drawings_dir": "user://drawings",
+	"color_file": "color.png",
+	"thumbnail_file": "thumbnail.png",
+	"meta_file": "drawing.json",
+	"temp_suffix": ".tmp",
+	"thumbnail_width": 256,
+	"thumbnail_height": 192,
+	"save_failed_message": "Ôi! Chưa cất được tranh của con. Tranh vẫn còn đây, mình thử lại sau một chút nhé.",
+	"open_failed_message": "Ôi! Chưa mở được bức tranh này.",
+	"gallery": {
+		"columns": 3,
+		"spacing": 24,
+		"tile_width": 256,
+		"tile_height": 192,
+		"empty_text": "Chưa có tranh nào"
+	}
+}

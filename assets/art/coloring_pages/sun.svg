@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1536" viewBox="0 0 2048 1536">
+  <g fill="none" stroke="#000000" stroke-width="16" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="1024" cy="768" r="300"/>
+    <circle cx="924" cy="700" r="40"/>
+    <circle cx="1124" cy="700" r="40"/>
+    <path d="M 904 860 Q 1024 960 1144 860"/>
+    <polygon points="1024,248 954,408 1094,408"/>
+    <polygon points="1024,248 954,408 1094,408" transform="rotate(45 1024 768)"/>
+    <polygon points="1024,248 954,408 1094,408" transform="rotate(90 1024 768)"/>
+    <polygon points="1024,248 954,408 1094,408" transform="rotate(135 1024 768)"/>
+    <polygon points="1024,248 954,408 1094,408" transform="rotate(180 1024 768)"/>
+    <polygon points="1024,248 954,408 1094,408" transform="rotate(225 1024 768)"/>
+    <polygon points="1024,248 954,408 1094,408" transform="rotate(270 1024 768)"/>
+    <polygon points="1024,248 954,408 1094,408" transform="rotate(315 1024 768)"/>
+  </g>
+</svg>

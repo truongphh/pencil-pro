@@ -1,0 +1,33 @@
+{
+	"validate_on_load": true,
+	"pages_dir": "res://assets/art/coloring_pages",
+	"screen": {
+		"thumbnail_width": 280,
+		"thumbnail_height": 210,
+		"label_height": 48,
+		"columns": 3,
+		"spacing": 24
+	},
+	"pages": [
+		{ "id": "house", "file": "house.svg", "title": "Ngôi nhà",
+			"interior_seeds": [[1024, 550], [750, 1100], [1024, 1150], [784, 870], [1264, 870]] },
+		{ "id": "sun", "file": "sun.svg", "title": "Mặt trời",
+			"interior_seeds": [[1024, 640], [924, 700], [1124, 700], [1024, 360], [1024, 1180]] },
+		{ "id": "flower", "file": "flower.svg", "title": "Bông hoa",
+			"interior_seeds": [[1024, 560], [1024, 290], [1024, 830], [1024, 1200], [1180, 1180]] },
+		{ "id": "fish", "file": "fish.svg", "title": "Con cá",
+			"interior_seeds": [[720, 700], [850, 850], [1200, 768], [1570, 768], [980, 470]] },
+		{ "id": "cat", "file": "cat.svg", "title": "Con mèo",
+			"interior_seeds": [[1024, 650], [770, 464], [1278, 464], [880, 760], [1168, 760]] },
+		{ "id": "car", "file": "car.svg", "title": "Ô tô",
+			"interior_seeds": [[1024, 900], [900, 640], [1150, 640], [704, 1115], [1344, 1115]] },
+		{ "id": "tree", "file": "tree.svg", "title": "Cái cây",
+			"interior_seeds": [[1024, 400], [1024, 1150], [880, 520], [1160, 560], [1000, 760]] },
+		{ "id": "star", "file": "star.svg", "title": "Ngôi sao",
+			"interior_seeds": [[1024, 500], [954, 760], [1094, 760], [330, 330], [1720, 1250]] },
+		{ "id": "balloon", "file": "balloon.svg", "title": "Bóng bay",
+			"interior_seeds": [[1024, 600], [460, 640], [1580, 620]] },
+		{ "id": "butterfly", "file": "butterfly.svg", "title": "Con bướm",
+			"interior_seeds": [[1024, 768], [1024, 405], [560, 500], [1488, 500], [700, 560], [680, 1080]] }
+	]
+}

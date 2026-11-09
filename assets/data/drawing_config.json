@@ -1,0 +1,16 @@
+{
+	"canvas_width": 2048,
+	"canvas_height": 1536,
+	"background_color": "#FFFFFF",
+	"letterbox_color": "#BDBDBD",
+	"pressure_min_scale": 0.3,
+	"pressure_max_scale": 2.0,
+	"pressure_curve": 1.0,
+	"stamp_spacing_ratio": 0.25,
+	"stamp_cache_limit": 256,
+	"undo_depth": 20,
+	"debug_readout": false,
+	"region_cell_size": 4,
+	"region_ink_threshold": 0.35,
+	"region_seed_search_cells": 4
+}

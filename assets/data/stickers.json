@@ -1,0 +1,37 @@
+{
+	"art_dir": "res://assets/art",
+	"sticker_sizes": [
+		{ "label": "Nhỏ", "size": 160 },
+		{ "label": "Vừa", "size": 280 },
+		{ "label": "To", "size": 420 }
+	],
+	"default_size_index": 1,
+	"stamp_size": 96,
+	"stamp_spacing": 120.0,
+	"thumbnail_size": 80,
+	"item_button_size": 104,
+	"cache_limit": 64,
+	"items": [
+		{ "id": "heart", "file": "stickers/heart.svg", "kind": "sticker" },
+		{ "id": "star", "file": "stickers/star.svg", "kind": "sticker" },
+		{ "id": "rainbow", "file": "stickers/rainbow.svg", "kind": "sticker" },
+		{ "id": "flower", "file": "stickers/flower.svg", "kind": "sticker" },
+		{ "id": "sun", "file": "stickers/sun.svg", "kind": "sticker" },
+		{ "id": "cloud", "file": "stickers/cloud.svg", "kind": "sticker" },
+		{ "id": "moon", "file": "stickers/moon.svg", "kind": "sticker" },
+		{ "id": "cat_face", "file": "stickers/cat_face.svg", "kind": "sticker" },
+		{ "id": "dog_face", "file": "stickers/dog_face.svg", "kind": "sticker" },
+		{ "id": "butterfly", "file": "stickers/butterfly.svg", "kind": "sticker" },
+		{ "id": "fish", "file": "stickers/fish.svg", "kind": "sticker" },
+		{ "id": "balloon", "file": "stickers/balloon.svg", "kind": "sticker" },
+		{ "id": "crown", "file": "stickers/crown.svg", "kind": "sticker" },
+		{ "id": "ice_cream", "file": "stickers/ice_cream.svg", "kind": "sticker" },
+		{ "id": "cupcake", "file": "stickers/cupcake.svg", "kind": "sticker" },
+		{ "id": "rocket", "file": "stickers/rocket.svg", "kind": "sticker" },
+		{ "id": "small_heart", "file": "stamps/small_heart.svg", "kind": "stamp" },
+		{ "id": "small_star", "file": "stamps/small_star.svg", "kind": "stamp" },
+		{ "id": "dot", "file": "stamps/dot.svg", "kind": "stamp" },
+		{ "id": "paw", "file": "stamps/paw.svg", "kind": "stamp" },
+		{ "id": "leaf", "file": "stamps/leaf.svg", "kind": "stamp" }
+	]
+}

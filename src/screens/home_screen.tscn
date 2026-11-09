@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/screens/home_screen.gd" id="1_home"]
+[ext_resource type="Script" path="res://src/ui/mute_button.gd" id="2_mutebutton"]
+
+[node name="HomeScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_home")
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Entries" type="HBoxContainer" parent="Center"]
+layout_mode = 2
+
+[node name="ColoringButton" type="Button" parent="Center/Entries"]
+layout_mode = 2
+theme_type_variation = &"ColoringCard"
+text = "Tô tranh"
+
+[node name="BlankPageButton" type="Button" parent="Center/Entries"]
+layout_mode = 2
+theme_type_variation = &"BlankCard"
+text = "Vẽ tự do"
+
+[node name="GalleryButton" type="Button" parent="Center/Entries"]
+layout_mode = 2
+theme_type_variation = &"GalleryCard"
+text = "Phòng triển lãm"
+
+[node name="MuteButton" type="Button" parent="."]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -104.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 104.0
+grow_horizontal = 0
+tooltip_text = "Âm thanh"
+script = ExtResource("2_mutebutton")
+icon_name = &"sound_on"
+
+[connection signal="pressed" from="Center/Entries/ColoringButton" to="." method="_on_coloring_button_pressed"]
+[connection signal="pressed" from="Center/Entries/BlankPageButton" to="." method="_on_blank_page_button_pressed"]
+[connection signal="pressed" from="Center/Entries/GalleryButton" to="." method="_on_gallery_button_pressed"]

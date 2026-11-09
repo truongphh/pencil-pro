@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/screens/app_root.gd" id="1_root"]
+[ext_resource type="PackedScene" path="res://src/screens/home_screen.tscn" id="2_home"]
+
+[node name="AppRoot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_root")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HomeScreen" parent="." instance=ExtResource("2_home")]
+layout_mode = 1
+
+[connection signal="blank_page_chosen" from="HomeScreen" to="." method="_on_home_screen_blank_page_chosen"]
+[connection signal="coloring_pages_chosen" from="HomeScreen" to="." method="_on_home_screen_coloring_pages_chosen"]
+[connection signal="gallery_chosen" from="HomeScreen" to="." method="_on_home_screen_gallery_chosen"]

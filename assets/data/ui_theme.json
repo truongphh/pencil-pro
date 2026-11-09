@@ -1,0 +1,64 @@
+{
+	"background_color": "#FFF4E8",
+	"text_color": "#3A3D4D",
+	"font_size": 28,
+	"corner_radius": 24,
+	"spacing": 24,
+	"nav_button_size": 88,
+	"dialog_width": 600,
+	"button": {
+		"fill_color": "#FFFFFF",
+		"pressed_fill_color": "#FFE5EC",
+		"disabled_fill_color": "#F1EEF6",
+		"border_color": "#D9CCF2",
+		"border_width": 3,
+		"content_margin": 12
+	},
+	"tool_button": {
+		"fill_color": "#FFFFFF",
+		"border_color": "#D9CCF2",
+		"border_width": 3,
+		"selected_border_color": "#3A3D4D",
+		"selected_border_width": 8,
+		"corner_radius": 18,
+		"content_margin": 8
+	},
+	"focus": {
+		"color": "#7FA8FF",
+		"width": 4
+	},
+	"panel": {
+		"fill_color": "#FFFFFF",
+		"border_color": "#E8DFF7",
+		"border_width": 3,
+		"content_margin": 12
+	},
+	"home_card": {
+		"width": 280,
+		"height": 320,
+		"spacing": 40,
+		"font_size": 34,
+		"corner_radius": 36,
+		"pressed_border_width": 8,
+		"colors": {
+			"ColoringCard": "#FFD6E0",
+			"BlankCard": "#D6F5E3",
+			"GalleryCard": "#DCE4FF"
+		}
+	},
+	"icons": {
+		"home": "res://assets/art/icons/home.svg",
+		"undo": "res://assets/art/icons/undo.svg",
+		"eraser": "res://assets/art/icons/eraser.svg",
+		"pencil": "res://assets/art/icons/pencil.svg",
+		"brush": "res://assets/art/icons/brush.svg",
+		"marker": "res://assets/art/icons/marker.svg",
+		"fill": "res://assets/art/icons/fill.svg",
+		"sticker": "res://assets/art/icons/sticker.svg",
+		"gallery": "res://assets/art/icons/gallery.svg",
+		"coloring": "res://assets/art/icons/coloring.svg",
+		"blank_page": "res://assets/art/icons/blank_page.svg",
+		"sound_on": "res://assets/art/icons/sound_on.svg",
+		"sound_off": "res://assets/art/icons/sound_off.svg"
+	}
+}
