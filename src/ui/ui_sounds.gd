@@ -1,6 +1,7 @@
 class_name UiSounds
 extends Node
-## The app's gentle UI sounds (colour pick, picture saved) and the mute setting.
+## The app's gentle UI sounds (colour pick, picture saved), the looping background
+## music, and the one mute setting that silences all of them.
 ## Owned by AppRoot and handed to the screens that need it; not an autoload.
 ## Implements: design/game-brief.md audio direction; story-007-kid-friendly-ui.md
 ## (AC "gentle sound on colour pick and on save", "mute button").
@@ -13,7 +14,12 @@ extends Node
 ##   color_pick     str    res:// path of the colour-pick sound (may not exist yet)
 ##   saved          str    res:// path of the picture-saved sound (may not exist yet)
 ##   volume_db      float  playback volume of both sounds
+##   music          str    res:// path of the background music loop (may not exist yet)
+##   music_volume_db float playback volume of the music
 ##   settings_path  str    user:// JSON file holding {"muted": bool}
+##
+## The music starts when this node is ready (unless muted) and restarts each time it
+## finishes, so it loops whatever the file's import loop setting.
 ##
 ## UNCONFIRMED ON GODOT 4.7.2: ResourceLoader.exists for imported audio, AudioStreamPlayer
 ## defaults (bus "Master"). FileAccess.store_string returning bool is confirmed (4.4,
@@ -29,6 +35,7 @@ var _muted: bool = false
 var _settings_path: String
 var _color_pick_player: AudioStreamPlayer
 var _saved_player: AudioStreamPlayer
+var _music_player: AudioStreamPlayer
 
 
 func _ready() -> void:
@@ -38,8 +45,11 @@ func _ready() -> void:
 	var volume := float(data["volume_db"])
 	_color_pick_player = _make_player(str(data["color_pick"]), volume)
 	_saved_player = _make_player(str(data["saved"]), volume)
+	_music_player = _make_player(str(data.get("music", "")), float(data.get("music_volume_db", volume)))
+	_music_player.finished.connect(_play.bind(_music_player))
 	_settings_path = str(data["settings_path"])
 	_muted = _read_muted()
+	_play(_music_player)
 
 
 ## Plays the colour-pick sound unless muted or the file is missing.
@@ -57,7 +67,8 @@ func is_muted() -> bool:
 	return _muted
 
 
-## Mutes or unmutes, stops anything playing when muting, saves the setting and emits
+## Mutes or unmutes (stopping everything when muting, restarting the music when
+## unmuting), saves the setting and emits
 ## [signal muted_changed]. Does nothing if [param muted] is the current state.
 func set_muted(muted: bool) -> void:
 	if muted == _muted:
@@ -66,6 +77,9 @@ func set_muted(muted: bool) -> void:
 	if muted:
 		_color_pick_player.stop()
 		_saved_player.stop()
+		_music_player.stop()
+	else:
+		_play(_music_player)
 	var file := FileAccess.open(_settings_path, FileAccess.WRITE)
 	if file == null or not file.store_string(JSON.stringify({"muted": muted})):
 		push_warning("Could not save the mute setting to " + _settings_path)
@@ -80,7 +94,7 @@ func _play(player: AudioStreamPlayer) -> void:
 func _make_player(path: String, volume_db: float) -> AudioStreamPlayer:
 	var player := AudioStreamPlayer.new()
 	player.volume_db = volume_db
-	if ResourceLoader.exists(path):
+	if not path.is_empty() and ResourceLoader.exists(path):
 		player.stream = load(path) as AudioStream
 	add_child(player)
 	return player

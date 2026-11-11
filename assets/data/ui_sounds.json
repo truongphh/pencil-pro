@@ -1,6 +1,8 @@
 {
-	"color_pick": "res://assets/audio/color_pick.ogg",
-	"saved": "res://assets/audio/saved.ogg",
+	"color_pick": "res://assets/audio/color_pick.wav",
+	"saved": "res://assets/audio/saved.wav",
 	"volume_db": -6.0,
+	"music": "res://assets/audio/music_loop.wav",
+	"music_volume_db": -14.0,
 	"settings_path": "user://settings.json"
 }

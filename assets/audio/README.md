@@ -1,14 +1,15 @@
-# UI sounds
+# App audio
 
-The app plays two gentle sounds. Their paths are set in `assets/data/ui_sounds.json`;
-until a file exists the app simply stays silent for that sound.
+Paths and volumes are set in `assets/data/ui_sounds.json`; a missing file is skipped
+silently. All three files are synthesized placeholders, regenerated with
+`python3 tools/audio/generate_sounds.py` (needs numpy).
 
-| File | When it plays | Suggested feel |
+| File | When it plays | Feel |
 |---|---|---|
-| `color_pick.ogg` | the child taps a colour | short (under 0.3 s), soft "blip" or bubble pop |
-| `saved.ogg` | a changed picture is saved when the child taps Home | short (under 1 s), happy chime |
+| `music_loop.wav` | from app start, looping, until muted | gentle music-box tune, C major, ~21 s |
+| `color_pick.wav` | the child taps a colour | short (0.15 s) bubble blip |
+| `saved.wav` | a changed picture is saved when the child taps Home | happy chime, ~1 s |
 
-Format: Ogg Vorbis (`.ogg`), mono or stereo, 44.1 or 48 kHz, peak around -6 dBFS,
-no silence at the start. Open the project in the Godot editor once after adding a
-file so it is imported (the app checks `ResourceLoader.exists`, which needs the import).
-To use another name or format (e.g. `.wav`), change the path in `ui_sounds.json`.
+The one Mute button silences all three. To swap in real audio, drop the file here
+(`.ogg`, `.wav` or `.mp3`), open the project in the Godot editor once so it is imported,
+and change the path in `ui_sounds.json` if the name or format differs.
